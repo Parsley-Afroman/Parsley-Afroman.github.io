@@ -8,9 +8,15 @@
   src: url("./walkthemoonsuperital.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'Catamaran';
+  src: url("./Catamaran-VariableFont_wght.ttf") format("truetype");
+}
+
 nav {
   width: 100%;
-  height: 10vh;
+  min-height: 10vh;
+  max-height: 15vh;
   background-color: teal;
   border: 2px solid #61dafb;
   display: flex;
@@ -69,3 +75,37 @@ nav {
     }
   }
 }
+
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: cadetblue;
+
+  .profileImageContainer {
+
+    .profilePic {
+      height: 400px;
+      width: 300px;
+      border-radius: 25%;
+      margin: 50px;
+      object-fit: cover;
+    }
+  }
+
+  .introContainer {
+      width: 60%;
+      margin: 90px 0 0 20px;
+
+    .headerThree {
+      font-family: "Walk The Moon Halftone";
+      font-size: 2rem;
+    }
+
+    .aboutMeText {
+      font-family: Catamaran;
+      font-weight: bold;
+    }
+  }
+}
+
