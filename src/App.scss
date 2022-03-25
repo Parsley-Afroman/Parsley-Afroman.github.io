@@ -1,3 +1,15 @@
+* {box-sizing: border-box}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: 'Walk The Moon Halftone';
   src: url("./walkthemoonhalfital.ttf") format("truetype");
@@ -13,34 +25,40 @@
   src: url("./Catamaran-VariableFont_wght.ttf") format("truetype");
 }
 
+.headerThree {
+  font-family: "Walk The Moon Halftone";
+  font-size: 4rem;
+}
+
 nav {
+  position: fixed;
+  z-index: 10;
   width: 100%;
   min-height: 10vh;
-  max-height: 15vh;
+  max-height: max-content;
   background-color: teal;
-  border: 2px solid #61dafb;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 
   h3 {
-    margin: 20px 0px 0 30px;
-    font-size: 2.4rem;
+    //margin: 3.5vh 0px 0 30px;
+    font-size: 4rem;
     font-family: Walk The Moon Super;
   }
 
-  button {
+  a {
     height: 40px;
     width: 40px;
-    margin: 20px 0 5px 0;
-    border-radius: 50%;
-    font-size: 1.4rem;
-    font-family: Walk The Moon Halftone;
+    margin: 3.5vh 0 5px 0;
+    font-size: 3rem;
+    color: black;
   }
 
   .upArrow {
     background: none;
     border: none;
-    margin: 15px 20px 0 0;
+    //margin: 2.5vh 20px 0 0;
     cursor: pointer;
 
     svg {
@@ -49,7 +67,8 @@ nav {
   }
 
   ul {
-    margin-top: 30px;
+    //think of another way  to create the top margin
+    margin-top: 5.5vh;
     display: flex;
     list-style: none;
 
@@ -62,50 +81,263 @@ nav {
       a {
         text-decoration: none;
         color: white;
-        font-size: 1.4rem;
+        font-size: 2.5rem;
         font-family: Walk The Moon Halftone;
       }
     }
   }
+  .burgerButton {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 2.5vh 0 10px 0;
+    border-radius: 30px 10px 30px 10px;
+    border: 2px solid #000000;
+    padding: 3px;
 
-  a {
-    p {
-      margin: 5px 20px 0 0;
-      font-size: 3rem;
-    }
   }
 }
 
 
 main {
+  padding: 90px 0 50px 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
   background-color: cadetblue;
+
+  .profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   .profileImageContainer {
 
     .profilePic {
       height: 400px;
       width: 300px;
-      border-radius: 25%;
-      margin: 50px;
+      border-radius: 30%;
+      margin: 50px 0 50px 50px;
       object-fit: cover;
     }
   }
 
   .introContainer {
       width: 60%;
-      margin: 90px 0 0 20px;
-
-    .headerThree {
-      font-family: "Walk The Moon Halftone";
-      font-size: 2rem;
-    }
+      //margin: 90px 0 0 20px;
 
     .aboutMeText {
       font-family: Catamaran;
+      font-size: 2rem;
       font-weight: bold;
+    }
+
+    .socialsLinks {
+      display: flex;
+      position: relative;
+      left: 70%;
+      margin-bottom: 30px;
+
+      a {
+        color: #000;
+
+        svg {
+          height: 50px;
+          width: 50px;
+        }
+
+        svg:nth-child(1){
+          margin-right: 80px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .introContainer {
+      width: 50%;
+      min-width: 300px;
+
+      .socialsLinks {
+        position: relative;
+        left: 0%;
+
+        svg:nth-child(1){
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vw 0 0 0;
+    width: 100%;
+
+    .cardWrapper {
+      width: 100%;
+      margin-top: 5vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .cardShow {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 400px;
+        min-width: 300px;
+        width: 30%;
+        background-color: white;
+        border: 2px solid lightgrey;
+        border-radius: 15%;
+        padding: 0 20px;
+        //background-image: url("Main/Projects/Cards/EarthwormHolderImg.png");
+        //background-size: contain;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        .cardHeader {
+          margin-top: 40px;
+          padding: 10px;
+          z-index: 2;
+          background-color: white;
+        }
+
+        .cardImage {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+          border-radius: 9%;
+        }
+
+        .briefDescription {
+          margin: 0 0 40px 0;
+          padding: 0 10px;
+          background: white;
+          border-radius: 15px;
+
+          p {
+            font-size: 1.4rem;
+          }
+        }
+      }
+      .Hide {
+        display: none;
+      }
     }
   }
 }
+
+footer {
+  background-color: teal;
+
+  .footerLinks {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0 20px 0;
+
+    a {
+      text-decoration: none;
+      color: #000000;
+
+      svg {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+
+  p {
+    font-family: Catamaran;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 0 30px;
+    padding-bottom: 20px;
+  }
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+  nav {
+    .navLinks {
+      display: none;
+    }
+    .burgerButton {
+      display: flex;
+    }
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  main {
+    justify-content: center;
+
+    .introContainer {
+      min-width: 250px;
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  main {
+    .profileImageContainer {
+        width: 85%;
+      .profilePic {
+        height: 400px;
+        width: 100%;
+        border-radius: 30%;
+        margin: 0;
+        object-fit: contain;
+      }
+    }
+
+    //.introContainer {
+    //  min-width: 250px;
+    //  margin: 0;
+    //}
+  }
+}
+@media only screen and (max-width: 500px) {
+    nav {
+      h3 {
+        margin: 20px 20px 0 0;
+        text-align: center;
+      }
+    }
+
+    main {
+
+      padding-top: 130px;
+      .introContainer {
+        .headerThree {
+          text-align: center;
+        }
+      }
+
+      .projects {
+
+        .cardShow:nth-child(2){
+          margin: 20px 0;
+        }
+      }
+    }
+
+    footer {
+      .footerLinks {
+        padding: 10px 0 0 0;
+      }
+    }
+}
+
 
