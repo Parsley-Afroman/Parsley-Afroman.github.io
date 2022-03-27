@@ -1,3 +1,10 @@
+@mixin navlinks {
+  text-decoration: none;
+  color: white;
+  font-size: 2.5rem;
+  font-family: Walk The Moon Halftone;
+}
+
 * {box-sizing: border-box}
 
 html {
@@ -41,6 +48,29 @@ nav {
   flex-wrap: wrap;
   justify-content: space-evenly;
 
+  .dropDownMenu {
+    position: fixed;
+
+    .cross {
+      position: relative;
+      font-size: 2rem;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+
+      li {
+        //cancelling out 2nd child styling
+        margin: 0;
+        a {
+          @include navlinks;
+        }
+      }
+    }
+  }
+
   h3 {
     //margin: 3.5vh 0px 0 30px;
     font-size: 4rem;
@@ -66,7 +96,7 @@ nav {
     }
   }
 
-  ul {
+  .navLinks {
     //think of another way  to create the top margin
     margin-top: 5.5vh;
     display: flex;
@@ -79,10 +109,7 @@ nav {
     li {
 
       a {
-        text-decoration: none;
-        color: white;
-        font-size: 2.5rem;
-        font-family: Walk The Moon Halftone;
+        @include navlinks;
       }
     }
   }
@@ -97,6 +124,10 @@ nav {
     border: 2px solid #000000;
     padding: 3px;
 
+  }
+
+  .Hide {
+    display: none;
   }
 }
 
