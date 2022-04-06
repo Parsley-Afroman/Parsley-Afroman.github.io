@@ -6,15 +6,17 @@ function DropDownMenu ({burgerView, setBurgerView}){
     }
     return (
         <>
-        <div className={!burgerView ? 'dropDownMenu' : 'Hide'}>
+        <div className={!burgerView ? 'dropDownMenu' : 'Hide'} id='dropDown'>
             <div className='cross' onClick={clickHandle}>
                 <FaRegWindowClose />
             </div>
-            <ul>
-                <li><a href='#'>About Me</a></li>
-                <li><a href='#'>Projects</a></li>
-                <li><a href='#'>Contacts</a></li>
-            </ul>
+            <div className='navList'>
+                <ul>
+                    <li><a href='#main'>About Me</a></li>
+                    <li><a href='#projects'>Projects</a></li>
+                    <li><a href='#footer'>Contact</a></li>
+                </ul>
+            </div>
         </div>
         </>
     )

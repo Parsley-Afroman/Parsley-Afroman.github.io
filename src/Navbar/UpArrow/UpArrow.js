@@ -1,9 +1,9 @@
 import {FaArrowUp} from "react-icons/fa";
 
-function UpArrow({burgerView}) {
+function UpArrow() {
     return (
        <>
-           <a href='#main' className={!burgerView ? 'Hide' : 'upArrow'}>
+           <a href='#main' className="upArrow">
                <FaArrowUp />
            </a>
        </>

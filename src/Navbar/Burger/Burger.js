@@ -1,4 +1,5 @@
 import BurgerLines from './BurgerLines.svg'
+import {FaBaby, FaCat, FaCube, FaDragon, FaFingerprint} from "react-icons/fa";
 
 
 function Burger ({burgerView, setBurgerView}){
@@ -11,7 +12,8 @@ function Burger ({burgerView, setBurgerView}){
 
     return (
         <div className={!burgerView ? 'Hide' : 'burgerButton'} onClick={clickHandle}>
-        <img src={BurgerLines} alt='Burger Lines' className='burgerSvg'/>
+        {/*<img src={BurgerLines} alt='Burger Lines' className='burgerSvg'/>*/}
+            <FaCube />
         </div>
     )
 }
