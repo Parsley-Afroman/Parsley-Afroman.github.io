@@ -1,8 +1,15 @@
 import './App.scss';
+import Navbar from "./Navbar/Navbar";
+import Main from "./Main/Main";
+import Footer from "./Footer/Footer";
 
 function App() {
-  return (
+
+    return (
       <>
+          <Navbar />
+          <Main />
+          <Footer />
       </>
   );
 }
