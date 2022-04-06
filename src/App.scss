@@ -347,8 +347,13 @@ main {
 footer {
   background-color: teal;
 
+  .headerThree {
+    padding: 0;
+  }
+
   .footerLinks {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     padding: 40px 0 20px 0;
@@ -515,6 +520,13 @@ footer {
       .headerThree {
         font-size: 3rem;
       }
+    }
+  }
+
+  footer {
+    .headerThree {
+      font-size: 3rem;
+      padding: 20px 0;
     }
   }
 }
