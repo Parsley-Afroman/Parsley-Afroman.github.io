@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.084b7ca8.css",
-    "main.js": "/static/js/main.3cc01375.js",
+    "main.js": "/static/js/main.d64ab7a5.js",
     "static/media/MeCutOut.png": "/static/media/MeCutOut.515478362ff61eea3476.png",
-    "static/media/SamiDevCV.pdf": "/static/media/SamiDevCV.92ac17a271cf1592de8c.pdf",
+    "static/media/SamiDevCV.pdf": "/static/media/SamiDevCV.817913d05a55df3ee657.pdf",
     "static/media/Catamaran-VariableFont_wght.ttf": "/static/media/Catamaran-VariableFont_wght.7f37a6bc16c2706edd09.ttf",
     "static/media/walkthemoonhalfital.ttf": "/static/media/walkthemoonhalfital.8ac2fee155142372031c.ttf",
     "static/media/walkthemoonsuperital.ttf": "/static/media/walkthemoonsuperital.a63951f23c196299371d.ttf",
     "index.html": "/index.html",
     "static/media/BurgerLines.svg": "/static/media/BurgerLines.d651b633e10d4a973d1906287984dad8.svg",
     "main.084b7ca8.css.map": "/static/css/main.084b7ca8.css.map",
-    "main.3cc01375.js.map": "/static/js/main.3cc01375.js.map"
+    "main.d64ab7a5.js.map": "/static/js/main.d64ab7a5.js.map"
   },
   "entrypoints": [
     "static/css/main.084b7ca8.css",
-    "static/js/main.3cc01375.js"
+    "static/js/main.d64ab7a5.js"
   ]
 }
